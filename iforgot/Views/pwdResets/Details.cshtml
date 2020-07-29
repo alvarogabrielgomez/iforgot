@@ -1,0 +1,51 @@
+﻿@model iforgot.Models.pwdReset
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>pwdReset</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pwdReset_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pwdReset_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pwdReset_selector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pwdReset_selector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pwdReset_token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pwdReset_token)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pwdReset_expires)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pwdReset_expires)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pwdReset_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

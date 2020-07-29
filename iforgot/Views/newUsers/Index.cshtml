@@ -1,0 +1,46 @@
+﻿@model IEnumerable<iforgot.Models.newUsers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.newUser_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.newUser_token)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.newUser_expires)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.newUser_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.newUser_token)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.newUser_expires)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.newUser_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.newUser_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.newUser_id })
+        </td>
+    </tr>
+}
+
+</table>

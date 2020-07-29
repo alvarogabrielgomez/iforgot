@@ -1,0 +1,43 @@
+﻿@model iforgot.Models.newUsers
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>newUsers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.newUser_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newUser_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newUser_token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newUser_token)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newUser_expires)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newUser_expires)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.newUser_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

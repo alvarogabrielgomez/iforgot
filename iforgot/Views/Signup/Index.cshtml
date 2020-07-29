@@ -1,0 +1,23 @@
+﻿@model iforgot.Models.newUsers
+
+<h2>IForgot.</h2>
+<br />
+
+<h1 class="title-login">Signup</h1>
+<div class="main-box iforgot-box main-box-simple">
+
+    <div class="nav-signup">
+
+        @using (Html.BeginForm("Create", "signup", FormMethod.Post))
+        {
+            @Html.TextBoxFor(m => m.newUser_email, new { Style = "margin: 2px auto 22px; width:65%;" , @Placeholder = "Email"})
+            @Html.TextBoxFor(m => m.newUser_name, new { Style = "margin: 2px auto 22px; width:65%;", @Placeholder = "Nome" })
+            @Html.TextBoxFor(m => m.newUser_pwd, new { Style = "margin: 2px auto 22px; width:65%;", @Placeholder = "Password" })
+            @Html.TextBoxFor(m => m.newUser_pwdRepeat, new { Style = "margin: 2px auto 22px; width:65%;", @Placeholder = "Repeat Password" })
+            <button value="submit" style="margin: 2px auto 0px; width:65%;" type="submit" class="button red">Signup</button>
+
+        }
+
+        <a href="/">Voltar</a>
+    </div>
+</div>
